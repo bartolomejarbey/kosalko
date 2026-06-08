@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += " js";</script>
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESC}}">
+  <meta name="theme-color" content="#0B0C10">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESC}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/obsideo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/obsideo.css?v=4">
+</head>
+<body class="grain">
+
+  <!-- ============ NAV (glass pill) — kopíruj 1:1 ============ -->
+  <div class="nav-wrap">
+    <nav class="nav-pill" aria-label="Hlavní navigace">
+      <a href="/" class="brand" aria-label="Obsideo — domů">
+        <svg class="mk" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,5 55,23 45,57 19,57 9,23" fill="none" stroke="#7E72FF" stroke-width="4" stroke-linejoin="round"/><polygon points="32,5 55,23 32,31" fill="#7E72FF"/><polygon points="32,5 9,23 32,31" fill="#4736FF"/></svg>
+        Obsideo
+      </a>
+      <span class="nav-sep"></span>
+      <div class="nav-links">
+        <div class="has-menu">
+          <button aria-haspopup="true">Služby <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="menu">
+            <a href="/sluzby/social-bot/"><strong>Social Bot · od 5 000 Kč</strong><span>AI správce sítí 24/7</span></a>
+            <a href="/sluzby/webove-stranky/"><strong>Webové stránky · od 6 000 Kč</strong><span>Weby a e-shopy, co prodávají</span></a>
+            <a href="/sluzby/marketing/"><strong>Získat zakázky</strong><span>PPC, Meta Ads, e-mailing</span></a>
+            <a href="/sluzby/seo/"><strong>SEO</strong><span>První na Googlu, poctivě</span></a>
+            <a href="/sluzby/geo/"><strong>GEO — AI viditelnost</strong><span>Vidět v ChatGPT a Perplexity</span></a>
+            <a href="/sluzby/automatizace/"><strong>Automatizace firem</strong><span>Ušetřete hodiny týdně</span></a>
+            <a href="/sluzby/systemy-na-miru/"><strong>Systémy na míru</strong><span>Aplikace, CRM, rezervace</span></a>
+            <a href="/sluzby/grafika/"><strong>Grafika · od 600 Kč</strong><span>Loga, identita, polepy</span></a>
+          </div>
+        </div>
+        <a href="/cenik/">Ceník</a>
+        <a href="/reference/">Práce</a>
+        <a href="/o-nas/">Studio</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <a href="/audit-zdarma/" class="nav-cta" data-magnetic>
+        <span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        Audit zdarma
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobilní navigace">
+    <div class="grp">Služby</div>
+    <a href="/sluzby/social-bot/">Social Bot</a>
+    <a href="/sluzby/webove-stranky/">Webové stránky</a>
+    <a href="/sluzby/marketing/">Získat zakázky</a>
+    <a href="/sluzby/seo/">SEO</a>
+    <a href="/sluzby/geo/">GEO — AI viditelnost</a>
+    <a href="/sluzby/automatizace/">Automatizace</a>
+    <a href="/sluzby/systemy-na-miru/">Systémy na míru</a>
+    <a href="/sluzby/grafika/">Grafika</a>
+    <div class="grp">Studio</div>
+    <a href="/cenik/">Ceník</a>
+    <a href="/reference/">Práce</a>
+    <a href="/o-nas/">O studiu</a>
+    <a href="/blog/">Blog</a>
+    <a href="/casto-kladene-dotazy/">Časté dotazy</a>
+    <a href="/kontakt/">Kontakt</a>
+    <a href="/audit-zdarma/" class="nav-cta"><span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> Chci audit zdarma</a>
+  </nav>
+
+  <main>
+<!-- ====================================================== -->
+<!-- {{MAIN}} — obsah stránky (viz _build-guide.md). První sekce = <section class="section subhero panel--ink"> nebo panel--bone. -->
+<!-- ====================================================== -->
+  </main>
+
+  <!-- ============ FOOTER — kopíruj 1:1 ============ -->
+  <footer class="site-footer grain">
+    <div class="container wide">
+      <div class="foot-word">OBSIDEO<span class="dot">.</span></div>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-lead">Vypadáte na milion. Platíte zlomek.</p>
+          <a href="/audit-zdarma/" class="pen-btn mt-8" data-magnetic><span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> Audit zdarma</a>
+        </div>
+        <div class="footer-col">
+          <h5>Služby</h5>
+          <ul>
+            <li><a href="/sluzby/social-bot/">Social Bot</a></li>
+            <li><a href="/sluzby/webove-stranky/">Webové stránky</a></li>
+            <li><a href="/sluzby/marketing/">Získat zakázky</a></li>
+            <li><a href="/sluzby/seo/">SEO</a></li>
+            <li><a href="/sluzby/geo/">AI viditelnost</a></li>
+            <li><a href="/sluzby/automatizace/">Automatizace</a></li>
+            <li><a href="/sluzby/grafika/">Grafika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Studio</h5>
+          <ul>
+            <li><a href="/o-nas/">O studiu</a></li>
+            <li><a href="/reference/">Práce</a></li>
+            <li><a href="/cenik/">Ceník</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/casto-kladene-dotazy/">Časté dotazy</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Spojit se</h5>
+          <ul>
+            <li><a href="mailto:ahoj@obsideo.cz">ahoj@obsideo.cz</a></li>
+            <li><a href="tel:+420000000000">+420 000 000 000</a></li>
+            <li class="muted">Po–Pá 9:00–18:00</li>
+            <li class="muted">Online po celé ČR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span data-year>2026</span> Obsideo · IČO: 00000000</div>
+        <div class="ll">
+          <a href="/obchodni-podminky/">Obchodní podmínky</a>
+          <a href="/ochrana-osobnich-udaju/">Ochrana osobních údajů</a>
+          <a href="/cookies/">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floatbar" aria-hidden="true">
+    <div class="bar">
+      <div class="prog"><i></i></div>
+      <span class="lbl">Líbí se vám to?</span>
+      <a href="/audit-zdarma/" class="pen-btn"><span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> Audit zdarma</a>
+    </div>
+  </div>
+
+  <div class="cookie-bar" role="dialog" aria-label="Souhlas s cookies">
+    <h5>Cookies a soukromí</h5>
+    <p>Používáme cookies pro provoz a — s vaším souhlasem — pro analytiku a marketing. Více v <a href="/cookies/">zásadách cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-volt" style="padding:11px 20px;font-size:0.85rem" data-cookie="all">Přijmout vše</button>
+      <button class="btn btn-outline" style="padding:11px 20px;font-size:0.85rem"><span data-cookie="necessary">Jen nezbytné</span></button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="/assets/js/obsideo.js?v=4"></script>
+</body>
+</html>

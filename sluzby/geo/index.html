@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += " js";</script>
+  <title>GEO — Buďte vidět v ChatGPT, Perplexity i Google AI | Obsideo</title>
+  <meta name="description" content="Generative Engine Optimization. Buďte to, co AI doporučí zákazníkům — dřív než konkurence. Balíčky od 3 500 Kč/měs.">
+  <meta name="theme-color" content="#0B0C10">
+  <meta property="og:title" content="GEO — Buďte vidět v ChatGPT, Perplexity i Google AI | Obsideo">
+  <meta property="og:description" content="Generative Engine Optimization. Buďte to, co AI doporučí zákazníkům — dřív než konkurence. Balíčky od 3 500 Kč/měs.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/obsideo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/obsideo.css?v=4">
+</head>
+<body class="grain">
+
+  <!-- ============ NAV (glass pill) — kopíruj 1:1 ============ -->
+  <div class="nav-wrap">
+    <nav class="nav-pill" aria-label="Hlavní navigace">
+      <a href="/" class="brand" aria-label="Obsideo — domů">
+        <svg class="mk" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,5 55,23 45,57 19,57 9,23" fill="none" stroke="#7E72FF" stroke-width="4" stroke-linejoin="round"/><polygon points="32,5 55,23 32,31" fill="#7E72FF"/><polygon points="32,5 9,23 32,31" fill="#4736FF"/></svg>
+        Obsideo
+      </a>
+      <span class="nav-sep"></span>
+      <div class="nav-links">
+        <div class="has-menu">
+          <button aria-haspopup="true">Služby <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="menu">
+            <a href="/sluzby/social-bot/"><strong>Social Bot · od 5 000 Kč</strong><span>AI správce sítí 24/7</span></a>
+            <a href="/sluzby/webove-stranky/"><strong>Webové stránky · od 6 000 Kč</strong><span>Weby a e-shopy, co prodávají</span></a>
+            <a href="/sluzby/marketing/"><strong>Získat zakázky</strong><span>PPC, Meta Ads, e-mailing</span></a>
+            <a href="/sluzby/seo/"><strong>SEO</strong><span>První na Googlu, poctivě</span></a>
+            <a href="/sluzby/geo/"><strong>GEO — AI viditelnost</strong><span>Vidět v ChatGPT a Perplexity</span></a>
+            <a href="/sluzby/automatizace/"><strong>Automatizace firem</strong><span>Ušetřete hodiny týdně</span></a>
+            <a href="/sluzby/systemy-na-miru/"><strong>Systémy na míru</strong><span>Aplikace, CRM, rezervace</span></a>
+            <a href="/sluzby/grafika/"><strong>Grafika · od 600 Kč</strong><span>Loga, identita, polepy</span></a>
+          </div>
+        </div>
+        <a href="/cenik/">Ceník</a>
+        <a href="/reference/">Práce</a>
+        <a href="/o-nas/">Studio</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <a href="/audit-zdarma/" class="nav-cta" data-magnetic>
+        <span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        Audit zdarma
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobilní navigace">
+    <div class="grp">Služby</div>
+    <a href="/sluzby/social-bot/">Social Bot</a>
+    <a href="/sluzby/webove-stranky/">Webové stránky</a>
+    <a href="/sluzby/marketing/">Získat zakázky</a>
+    <a href="/sluzby/seo/">SEO</a>
+    <a href="/sluzby/geo/">GEO — AI viditelnost</a>
+    <a href="/sluzby/automatizace/">Automatizace</a>
+    <a href="/sluzby/systemy-na-miru/">Systémy na míru</a>
+    <a href="/sluzby/grafika/">Grafika</a>
+    <div class="grp">Studio</div>
+    <a href="/cenik/">Ceník</a>
+    <a href="/reference/">Práce</a>
+    <a href="/o-nas/">O studiu</a>
+    <a href="/blog/">Blog</a>
+    <a href="/casto-kladene-dotazy/">Časté dotazy</a>
+    <a href="/kontakt/">Kontakt</a>
+    <a href="/audit-zdarma/" class="nav-cta"><span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> Chci audit zdarma</a>
+  </nav>
+
+  <main>
+
+    <!-- ============ SUBHERO (volt) ============ -->
+    <section class="section subhero panel--volt grain">
+      <div class="subhero-glow"></div>
+      <div class="container">
+        <span class="pill" data-reveal style="border-color:rgba(255,255,255,.4)"><span class="dot"></span> Okno se zavírá · first-mover výhoda</span>
+        <h1 class="mt-8" data-reveal>Buďte to, co<br>umělá inteligence<br><span class="script" style="font-size:1.05em">doporučí.</span></h1>
+        <p class="lead mt-6" data-reveal style="max-width:48ch;color:rgba(255,255,255,.92)">Zákazníci se přestávají ptát Googlu a začínají se ptát ChatGPT. GEO je nová disciplína, která rozhodne, jestli vás AI nabídne — nebo jestli nabídne konkurenci. Teď je to levné. Za rok bude pozdě.</p>
+        <div class="actions mt-12" data-reveal>
+          <a href="/audit-zdarma/" class="btn btn-bone btn-lg" data-magnetic>Chci AI audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#balicky" class="btn btn-outline btn-lg"><span>Ukažte mi ceny</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATISTIKY (ink, count-up) ============ -->
+    <section class="section panel--ink grain">
+      <div class="container">
+        <div class="section-head mb-16" data-reveal>
+          <span class="eyebrow">Proč to řešit</span>
+          <h2 class="mt-4">Vyhledávání se<br>právě <span class="accent">přepisuje.</span></h2>
+        </div>
+        <div class="stats">
+          <div class="stat" data-reveal><div class="n"><span data-count="800" data-suf=" M+">800 M+</span></div><div class="l">Uživatelů ChatGPT každý týden hledá odpovědi i doporučení</div></div>
+          <div class="stat" data-reveal><div class="n"><span class="accent" data-count="4.4" data-dec="1" data-suf="×">4,4×</span></div><div class="l">Vyšší konverze u návštěvníků, kteří přijdou z odpovědi AI</div></div>
+          <div class="stat" data-reveal><div class="n"><span data-count="25" data-suf=" %">25 %</span></div><div class="l">Vyhledávání už dnes končí přímo odpovědí AI, ne seznamem odkazů</div></div>
+          <div class="stat" data-reveal><div class="n"><span class="accent">1.</span></div><div class="l">AI ukazuje jednu odpověď. Buď v ní jste, nebo neexistujete</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CO JE GEO LAICKY (split, ukázka AI odpovědi) ============ -->
+    <section class="section panel--bone">
+      <div class="container">
+        <div class="split" style="align-items:center;">
+          <div data-reveal>
+            <span class="eyebrow">GEO srozumitelně</span>
+            <h2 class="mt-6">SEO vás dostalo<br>na Google.<br><span class="script" style="font-size:1.1em">GEO vás dostane</span><br>do odpovědi.</h2>
+            <p class="body-lg mt-8" style="max-width:42ch;">GEO znamená Generative Engine Optimization — optimalizaci pro generativní vyhledávače. Místo deseti modrých odkazů dnes ChatGPT, Perplexity nebo Google AI vrátí <strong>jednu hotovou odpověď</strong> a v ní pár konkrétních doporučení. GEO je řemeslo, kterým zajistíme, že tím doporučeným jste vy.</p>
+            <ul class="feat mt-8">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><div class="h">AI vás cituje</div><div class="p">Vaše firma se objeví přímo v odpovědi jako důvěryhodný zdroj.</div></div></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><div class="h">Zákazník už je rozhodnutý</div><div class="p">Přichází s důvěrou „mně to doporučila AI" — proto vyšší konverze.</div></div></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><div class="h">Konkurence zatím spí</div><div class="p">Většina firem o GEO ještě neslyšela. To je vaše okno.</div></div></li>
+            </ul>
+          </div>
+          <div data-reveal>
+            <div class="card" style="background:var(--ink);border-color:rgba(126,114,255,.35);">
+              <div class="flex items-center gap-3 mb-8">
+                <div class="quote"><div class="av" style="background:var(--volt);color:#fff">AI</div></div>
+                <div><div style="font-weight:600;color:var(--cream)">Generativní vyhledávač</div><div style="font-size:.8rem;color:rgba(255,255,255,.6)">odpovídá na dotaz zákazníka</div></div>
+                <span class="pill" style="margin-left:auto;border-color:rgba(255,255,255,.3)"><span class="dot"></span> Live</span>
+              </div>
+              <div style="background:rgba(255,255,255,.06);border-radius:14px;padding:14px 16px;margin-bottom:10px;">
+                <div style="font-size:.72rem;color:rgba(255,255,255,.55);margin-bottom:4px">Zákazník · dotaz</div>
+                <div style="font-size:.94rem;color:var(--cream)">Kdo dělá kvalitní weby pro malé firmy v Brně a nestojí majlant?</div>
+              </div>
+              <div style="background:rgba(126,114,255,.14);border:1px solid rgba(126,114,255,.3);border-radius:14px;padding:14px 16px;">
+                <div style="font-size:.72rem;color:#7E72FF;margin-bottom:6px;font-weight:600">Odpověď AI</div>
+                <div style="font-size:.94rem;color:var(--cream)">Pro malé firmy bych doporučil studio <strong style="color:#fff">Obsideo</strong> — dělají weby na míru bez šablon už od 6 000 Kč, jsou rychlí a&nbsp;mají skvělé reference. Dále zvažte…</div>
+              </div>
+              <p class="mt-6" style="font-size:.78rem;color:rgba(255,255,255,.6)">Ilustrace. Přesně takhle chcete, aby o vás AI mluvila.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLATFORMY (ink, grid cols-3) ============ -->
+    <section class="section panel--ink grain">
+      <div class="container">
+        <div class="eybrow-row mb-12" data-reveal>
+          <div class="section-head">
+            <span class="eyebrow">Kde vás zviditelníme</span>
+            <h2 class="mt-4">Šest motorů,<br>jedna odpověď.</h2>
+          </div>
+          <p class="muted" style="max-width:34ch">Každá platforma váží zdroje jinak. Pracujeme se všemi najednou, ať vás najdou napříč.</p>
+        </div>
+        <div class="grid cols-3">
+          <div class="card hov ic" data-reveal>
+            <div class="h-md">ChatGPT</div>
+            <p class="muted mt-4">Nejpoužívanější asistent na světě. Stále častěji prohledává web a doporučuje konkrétní firmy a&nbsp;produkty.</p>
+          </div>
+          <div class="card hov ic" data-reveal>
+            <div class="h-md">Google AI Overviews</div>
+            <p class="muted mt-4">AI shrnutí nad výsledky vyhledávání. Sebere pozornost dřív, než se zákazník dostane k&nbsp;odkazům.</p>
+          </div>
+          <div class="card hov ic" data-reveal>
+            <div class="h-md">Perplexity</div>
+            <p class="muted mt-4">Vyhledávač, který odpovídá s&nbsp;citacemi zdrojů. Být citovaným zdrojem = být vidět.</p>
+          </div>
+          <div class="card hov ic" data-reveal>
+            <div class="h-md">Gemini</div>
+            <p class="muted mt-4">AI od Googlu napříč Androidem, Gmailem i&nbsp;vyhledáváním. Obrovský a&nbsp;rostoucí dosah.</p>
+          </div>
+          <div class="card hov ic" data-reveal>
+            <div class="h-md">Claude</div>
+            <p class="muted mt-4">Asistent oblíbený u&nbsp;profesionálů a&nbsp;firem, kteří hledají poskytovatele a&nbsp;řešení.</p>
+          </div>
+          <div class="card hov ic" data-reveal>
+            <div class="h-md">Microsoft Copilot</div>
+            <p class="muted mt-4">Zabudovaný ve Windows, Edge a&nbsp;Office. Doporučuje přímo tam, kde lidé pracují.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROČ TEĎ — poctivá urgence (volt full-bleed) ============ -->
+    <section class="section panel--volt grain">
+      <div class="container">
+        <div class="split" style="align-items:center;">
+          <div data-reveal>
+            <span class="pill" style="border-color:rgba(255,255,255,.4)"><span class="dot"></span> Poctivá urgence, ne strašení</span>
+            <h2 class="mt-6">PROČ ŘEŠIT<br>GEO PRÁVĚ<br>TEĎ.</h2>
+            <p class="body-lg mt-8" style="max-width:40ch;color:rgba(255,255,255,.92)">AI si teprve buduje, koho považuje za autoritu ve vašem oboru. Kdo do těchto modelů „vejde" první, ten v nich zůstane. To je first-mover výhoda — a&nbsp;ta se nedá koupit dvakrát.</p>
+            <div class="actions mt-8">
+              <a href="/audit-zdarma/" class="btn btn-bone" data-magnetic>Chci AI audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+          <div data-reveal>
+            <ul class="feat">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><div class="h">Levné teď, dražší později</div><div class="p">Dokud je obor prázdný, stačí málo. Až přijdou velcí, cena viditelnosti poroste.</div></div></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><div class="h">Náskok se sčítá</div><div class="p">Čím dřív vás AI zná, tím pevněji vás drží. Konkurence vás pak dohání těžko.</div></div></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><div><div class="h">Žádné prázdné sliby</div><div class="p">Negarantujeme „pozici v ChatGPT". Garantujeme práci, měření a&nbsp;poctivý postup.</div></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JAK TO FUNGUJE — kroky (bone) ============ -->
+    <section class="section panel--bone">
+      <div class="container">
+        <div class="section-head mb-16" data-reveal>
+          <span class="eyebrow">Jak na to jdeme</span>
+          <h2 class="mt-4">Pět kroků do<br>odpovědí <span class="script" style="font-size:1.1em">AI.</span></h2>
+        </div>
+        <div class="steps">
+          <div class="step" data-reveal><div class="sn">01</div><div><h3>AI audit</h3><p>Zjistíme, co o vás dnes AI říká, na jaké dotazy se objevuje konkurence a&nbsp;kde jsou vaše příležitosti.</p></div></div>
+          <div class="step" data-reveal><div class="sn">02</div><div><h3>Technika</h3><p>Připravíme web tak, aby ho AI uměla správně přečíst — strukturovaná data, čistá architektura, strojová čitelnost.</p></div></div>
+          <div class="step" data-reveal><div class="sn">03</div><div><h3>Restrukturalizace obsahu</h3><p>Přepíšeme a&nbsp;doplníme obsah do formy, kterou modely rády citují: jasné odpovědi, fakta, konkrétní čísla.</p></div></div>
+          <div class="step" data-reveal><div class="sn">04</div><div><h3>Autorita</h3><p>Budujeme zmínky, citace a&nbsp;důvěryhodné zdroje, ze kterých si AI skládá, komu věřit.</p></div></div>
+          <div class="step" data-reveal><div class="sn">05</div><div><h3>Monitoring</h3><p>Pravidelně sledujeme, jak vás jednotlivé AI uvádějí, a&nbsp;ladíme, dokud nejste doporučení.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CRAZY KOMPOZICE (ink) ============ -->
+    <section class="section panel--ink grain text-center" style="overflow:hidden">
+      <div class="container">
+        <span class="eyebrow nm" style="justify-content:center" data-reveal>Buď v odpovědi, nebo nikde</span>
+        <div class="overlap-script mt-8" data-reveal style="display:inline-block">
+          <div class="giant-word">VIDĚT.</div>
+          <span class="scr" style="left:50%;top:58%;transform:translateX(-50%) rotate(-5deg);font-size:clamp(2.4rem,9vw,7rem)">tam, kde se ptají</span>
+        </div>
+        <p class="body-lg mx-auto mt-8" style="max-width:46ch" data-reveal>Google ukazoval deset odkazů a&nbsp;dával šanci i&nbsp;desátému. AI ukazuje jednu odpověď. V&nbsp;novém světě neexistuje druhá strana výsledků.</p>
+      </div>
+    </section>
+
+    <!-- ============ BALÍČKY (bone) ============ -->
+    <section class="section panel--bone" id="balicky">
+      <div class="container">
+        <div class="eybrow-row mb-12" data-reveal>
+          <div class="section-head">
+            <span class="eyebrow">Balíčky GEO</span>
+            <h2 class="mt-4">Vstupte do AI<br>za zlomek.</h2>
+          </div>
+          <p class="muted" style="max-width:34ch">Žádná vázací smlouva. Začněte malým balíčkem a&nbsp;rozšiřte, jakmile uvidíte zmínky přibývat.</p>
+        </div>
+        <div class="plans">
+          <div class="plan" data-reveal>
+            <div class="pt">Start</div>
+            <div class="pp">3 500 Kč<small>/měs · nastavení 7 000 Kč</small></div>
+            <ul class="pf">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> AI audit a strategie</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Technická příprava webu</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Optimalizace klíčových stránek</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Měsíční report viditelnosti</li>
+            </ul>
+            <a href="/kontakt/" class="btn btn-outline btn-block"><span>Mám zájem</span></a>
+          </div>
+          <div class="plan featured" data-reveal>
+            <div class="pt">Růst</div>
+            <div class="pp">6 000 Kč<small>/měs · nastavení 10 000 Kč</small></div>
+            <ul class="pf">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Vše ze Startu</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Restrukturalizace obsahu</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Budování autority a citací</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Monitoring napříč platformami</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Průběžná optimalizace</li>
+            </ul>
+            <a href="/kontakt/" class="btn btn-bone btn-block" data-magnetic><span>Chci Růst</span></a>
+          </div>
+          <div class="plan" data-reveal>
+            <div class="pt">Lídr</div>
+            <div class="pp">8 000 Kč<small>/měs · nastavení 15 000 Kč</small></div>
+            <ul class="pf">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Vše z Růstu</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pokročilá tvorba obsahu</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Aktivní budování zmínek</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Detailní reporting a konzultace</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Prioritní podpora</li>
+            </ul>
+            <a href="/kontakt/" class="btn btn-outline btn-block"><span>Mám zájem</span></a>
+          </div>
+        </div>
+        <div class="guarantee mt-12" data-reveal>
+          <span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div><strong>Nejste si jistí, kde stojíte?</strong> Začněte vstupním <strong>AI auditem za 2&nbsp;500 Kč</strong> (jednorázově). Projdeme, co o vás AI dnes říká, a&nbsp;dostanete konkrétní plán. Rozhodnete se pak.</div>
+        </div>
+        <div class="actions mt-12" data-reveal>
+          <a href="/audit-zdarma/" class="btn btn-ink" data-magnetic>Chci AI audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="/cenik/" class="text-link">Celý ceník studia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ (ink) ============ -->
+    <section class="section panel--ink grain">
+      <div class="container">
+        <div class="section-head mb-16" data-reveal>
+          <span class="eyebrow">Časté dotazy</span>
+          <h2 class="mt-4">Než se rozhodnete.</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="qt">Můžete zaručit, že mě ChatGPT bude doporučovat?</span><span class="qi"></span></button><div class="faq-a"><div class="faq-a-in">Ne — a&nbsp;kdo to slibuje, neříká pravdu. AI modely nejsou seznam pozic, který by šel koupit. Garantujeme poctivou práci, měření a&nbsp;postup, který výrazně zvyšuje šanci, že vás AI uvede. Pokrok pravidelně reportujeme na číslech.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="qt">Za jak dlouho uvidím výsledky?</span><span class="qi"></span></button><div class="faq-a"><div class="faq-a-in">GEO je podobně jako SEO běh na delší trať — první zmínky se obvykle objevují v&nbsp;řádu týdnů až měsíců a&nbsp;efekt se v&nbsp;čase sčítá. Právě proto se vyplatí začít dřív než konkurence.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="qt">Jak se to liší od klasického SEO?</span><span class="qi"></span></button><div class="faq-a"><div class="faq-a-in">SEO vás dostává mezi odkazy na Googlu. GEO vás dostává přímo do odpovědi generativních AI. Technicky se překrývají, ale GEO pracuje navíc s&nbsp;tím, jak modely vybírají a&nbsp;citují zdroje. Ideální je dělat obojí — často je propojíme.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="qt">Potřebuju k tomu nový web?</span><span class="qi"></span></button><div class="faq-a"><div class="faq-a-in">Většinou ne. Pracujeme s&nbsp;tím, co máte — doladíme techniku a&nbsp;obsah. Pokud je web zastaralý nebo špatně čitelný pro stroje, řekneme vám to na rovinu a&nbsp;navrhneme rozsah úprav.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="qt">Musím se zavázat na dlouhou dobu?</span><span class="qi"></span></button><div class="faq-a"><div class="faq-a-in">Ne. GEO běží bez vázací smlouvy. Doporučujeme počítat aspoň s&nbsp;několika měsíci, aby se práce projevila, ale rozhodnutí pokračovat je vždy na vás.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="qt">Pro koho má GEO smysl?</span><span class="qi"></span></button><div class="faq-a"><div class="faq-a-in">Pro každého, koho zákazníci hledají a&nbsp;porovnávají před nákupem — řemeslníky, e-shopy, služby, lokální podniky i&nbsp;B2B. Pokud se vás lidé na něco ptají, dnes se ptají i&nbsp;AI. A&nbsp;ta jim odpoví — ideálně vámi.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ZÁVĚREČNÉ CTA (volt) — blok J ============ -->
+    <section class="section panel--volt grain text-center">
+      <div class="container">
+        <span class="pill" data-reveal style="border-color:rgba(255,255,255,.4)"><span class="dot"></span> Okno se zavírá · začněte dřív</span>
+        <h2 class="mt-8" data-reveal>BUĎTE PRVNÍ,<br>KOHO AI <span class="script" style="font-size:1.05em">řekne.</span></h2>
+        <p class="body-lg mx-auto mt-6" data-reveal style="max-width:44ch;color:rgba(255,255,255,.92)">Začneme AI auditem za 2&nbsp;500 Kč — ukážeme vám na číslech, co o vás AI dnes říká a&nbsp;jak vás dostat do odpovědí. Nezávazně.</p>
+        <div class="actions mt-12" style="justify-content:center" data-reveal>
+          <a href="/audit-zdarma/" class="btn btn-bone btn-lg" data-magnetic>Chci AI audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="/kontakt/" class="btn btn-outline btn-lg"><span>Napište nám</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER — kopíruj 1:1 ============ -->
+  <footer class="site-footer grain">
+    <div class="container wide">
+      <div class="foot-word">OBSIDEO<span class="dot">.</span></div>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-lead">Vypadáte na milion. Platíte zlomek.</p>
+          <a href="/audit-zdarma/" class="pen-btn mt-8" data-magnetic><span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> Audit zdarma</a>
+        </div>
+        <div class="footer-col">
+          <h5>Služby</h5>
+          <ul>
+            <li><a href="/sluzby/social-bot/">Social Bot</a></li>
+            <li><a href="/sluzby/webove-stranky/">Webové stránky</a></li>
+            <li><a href="/sluzby/marketing/">Získat zakázky</a></li>
+            <li><a href="/sluzby/seo/">SEO</a></li>
+            <li><a href="/sluzby/geo/">AI viditelnost</a></li>
+            <li><a href="/sluzby/automatizace/">Automatizace</a></li>
+            <li><a href="/sluzby/grafika/">Grafika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Studio</h5>
+          <ul>
+            <li><a href="/o-nas/">O studiu</a></li>
+            <li><a href="/reference/">Práce</a></li>
+            <li><a href="/cenik/">Ceník</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/casto-kladene-dotazy/">Časté dotazy</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Spojit se</h5>
+          <ul>
+            <li><a href="mailto:ahoj@obsideo.cz">ahoj@obsideo.cz</a></li>
+            <li><a href="tel:+420000000000">+420 000 000 000</a></li>
+            <li class="muted">Po–Pá 9:00–18:00</li>
+            <li class="muted">Online po celé ČR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span data-year>2026</span> Obsideo · IČO: 00000000</div>
+        <div class="ll">
+          <a href="/obchodni-podminky/">Obchodní podmínky</a>
+          <a href="/ochrana-osobnich-udaju/">Ochrana osobních údajů</a>
+          <a href="/cookies/">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floatbar" aria-hidden="true">
+    <div class="bar">
+      <div class="prog"><i></i></div>
+      <span class="lbl">Líbí se vám to?</span>
+      <a href="/audit-zdarma/" class="pen-btn"><span class="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span> Audit zdarma</a>
+    </div>
+  </div>
+
+  <div class="cookie-bar" role="dialog" aria-label="Souhlas s cookies">
+    <h5>Cookies a soukromí</h5>
+    <p>Používáme cookies pro provoz a — s vaším souhlasem — pro analytiku a marketing. Více v <a href="/cookies/">zásadách cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-volt" style="padding:11px 20px;font-size:0.85rem" data-cookie="all">Přijmout vše</button>
+      <button class="btn btn-outline" style="padding:11px 20px;font-size:0.85rem"><span data-cookie="necessary">Jen nezbytné</span></button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="/assets/js/obsideo.js?v=4"></script>
+</body>
+</html>
