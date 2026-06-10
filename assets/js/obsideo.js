@@ -178,13 +178,46 @@
   });
   addEventListener("resize", function () { doc.querySelectorAll(".faq-item.open .faq-a").forEach(function (a) { a.style.maxHeight = a.scrollHeight + "px"; }); });
 
-  /* ---------- Cookie ---------- */
-  var bar = doc.querySelector(".cookie-bar");
-  if (bar) {
-    var K = "obsideo_cookie_v3";
-    if (!localStorage.getItem(K)) setTimeout(function () { bar.classList.add("show"); }, 1100);
-    bar.querySelectorAll("[data-cookie]").forEach(function (b) { b.addEventListener("click", function () { localStorage.setItem(K, b.getAttribute("data-cookie")); bar.classList.remove("show"); }); });
-  }
+  /* ---------- Cookie consent (granulární, legální) ---------- */
+  (function () {
+    var KEY = "obsidio_consent_v1";
+    var bar = doc.querySelector(".cookie-bar");
+    var modal = doc.querySelector(".cc-modal");
+    function get() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
+    function apply(c) {
+      root.setAttribute("data-cc-analytics", c.analytics ? "1" : "0");
+      root.setAttribute("data-cc-marketing", c.marketing ? "1" : "0");
+      window.obsidioConsent = c;
+      window.dispatchEvent(new CustomEvent("obsidio:consent", { detail: c }));
+      // Sem napojte podmíněné načtení analytiky/marketingu, např.:
+      // if (c.analytics) { /* load Plausible / GA4 */ }
+    }
+    function hideBar() { if (bar) bar.classList.remove("show"); }
+    function closeModal() { if (modal) { modal.hidden = true; doc.body.classList.remove("menu-open"); } }
+    function save(c) { c.necessary = true; c.ts = new Date().toISOString(); try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {} apply(c); hideBar(); closeModal(); }
+    function openModal() {
+      if (!modal) return;
+      var c = get() || { analytics: false, marketing: false };
+      modal.querySelectorAll("input[data-cat]").forEach(function (i) { i.checked = !!c[i.getAttribute("data-cat")]; });
+      modal.hidden = false; doc.body.classList.add("menu-open");
+    }
+    var cur = get();
+    if (cur) apply(cur); else if (bar) setTimeout(function () { bar.classList.add("show"); }, 1000);
+    doc.addEventListener("click", function (e) {
+      var t = e.target.closest("[data-cc]"); if (!t) return;
+      var a = t.getAttribute("data-cc");
+      if (a === "all") save({ analytics: true, marketing: true });
+      else if (a === "reject") save({ analytics: false, marketing: false });
+      else if (a === "open") { e.preventDefault(); openModal(); }
+      else if (a === "close") closeModal();
+      else if (a === "save") {
+        var an = modal.querySelector('input[data-cat="analytics"]');
+        var mk = modal.querySelector('input[data-cat="marketing"]');
+        save({ analytics: an && an.checked, marketing: mk && mk.checked });
+      }
+    });
+    addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) closeModal(); });
+  })();
 
   /* ---------- Forms (demo) ---------- */
   doc.querySelectorAll("form[data-form]").forEach(function (f) {
