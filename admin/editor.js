@@ -90,8 +90,18 @@
   }
 
   /* ---------- napojení editace ---------- */
+  function applyNavAdds(d) {
+    var na; try { na = JSON.parse(localStorage.getItem("obsidio_nav_add") || "[]"); } catch (e) { na = []; }
+    if (!na.length) return;
+    var nav = d.querySelector(".nav-links"), mob = d.querySelector(".mobile-nav");
+    na.forEach(function (it) {
+      if (nav && !nav.querySelector('a[href="' + it.href + '"]')) { var a = d.createElement("a"); a.href = it.href; a.textContent = it.label; nav.appendChild(a); }
+      if (mob && !mob.querySelector('a[href="' + it.href + '"]')) { var b = d.createElement("a"); b.href = it.href; b.textContent = it.label; var cta = mob.querySelector(".nav-cta"); if (cta) mob.insertBefore(b, cta); else mob.appendChild(b); }
+    });
+  }
   function wire() {
     var main = body.querySelector("main"); if (!main) return;
+    applyNavAdds(doc);
     // hover sekce → bar
     var bar = doc.createElement("div"); bar.className = "__bar";
     bar.innerHTML = '<button data-a="up" title="Nahoru">↑</button><button data-a="down" title="Dolů">↓</button><button data-a="dup" title="Duplikovat">⧉</button><button data-a="bg" title="Pozadí">◑</button><button data-a="del" class="del" title="Smazat">✕</button>';
@@ -236,12 +246,12 @@
     var store = JSON.parse(localStorage.getItem("obsidio_pages") || "{}");
     store["/" + slug + "/"] = { name: name, html: newHtml };
     localStorage.setItem("obsidio_pages", JSON.stringify(store));
+    var addNav = $("#np-nav") && $("#np-nav").checked;
+    if (addNav) { var na; try { na = JSON.parse(localStorage.getItem("obsidio_nav_add") || "[]"); } catch (e) { na = []; } na.push({ label: name, href: "/" + slug + "/" }); localStorage.setItem("obsidio_nav_add", JSON.stringify(na)); }
     $("#m-new").classList.remove("open");
     buildPageSelect();
-    // načti novou stránku přes srcdoc
     loadStored("/" + slug + "/");
-    if (confirm('Přidat "' + name + '" do menu (navigace)?')) addNavItem(name, "/" + slug + "/");
-    showToast("Stránka vytvořena");
+    showToast(addNav ? "Stránka vytvořena a přidána do menu" : "Stránka vytvořena");
   }
   function loadStored(path) {
     var store = JSON.parse(localStorage.getItem("obsidio_pages") || "{}"); var p = store[path]; if (!p) return;

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/admin/editor.css">
+  <link rel="stylesheet" href="/admin/editor.css?v=2">
 </head>
 <body>
   <div class="app">
@@ -52,6 +52,7 @@
     </div>
     <div class="field" style="margin-top:16px"><label>Název stránky</label><input id="np-name" placeholder="např. Tvorba e-shopů"></div>
     <div class="field"><label>Adresa (slug) — nepovinné</label><input id="np-slug" placeholder="tvorba-eshopu"></div>
+    <label style="display:flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;margin:4px 0 2px;cursor:pointer"><input type="checkbox" id="np-nav" checked style="width:16px;height:16px"> Přidat do menu (navigace)</label>
     <div class="actions"><button class="tb-btn primary" id="npCreate">Vytvořit</button><button class="tb-btn" data-close="m-new">Zrušit</button></div>
   </div></div></div>
 
@@ -78,6 +79,6 @@
   </div></div></div>
 
   <div class="toast" id="toast"></div>
-  <script src="/admin/editor.js"></script>
+  <script src="/admin/editor.js?v=2"></script>
 </body>
 </html>
