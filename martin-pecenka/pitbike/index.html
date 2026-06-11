@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pitstop — pronájem dětských pitbike | KONCEPT</title>
+<meta name="description" content="Půjč si dětskou pitbike — elektro i benzín. Naložíme, zaškolíme, vyložíme. Vejde se do kufru sedanu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0A0A; --race:#FF4D00; --bolt:#FFD400; --paper:#F4F4F2; --gray:#9a9a9a;
+    --disp:"Anton",Impact,system-ui,sans-serif;
+    --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--ink);color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--race)}
+  .btn{display:inline-block;background:var(--race);color:#fff;font-weight:700;padding:16px 34px;border-radius:6px;transition:.15s;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;border:2px solid var(--race);cursor:pointer}
+  .btn:hover{background:var(--bolt);border-color:var(--bolt);color:var(--ink);transform:translateY(-2px)}
+  .btn--ghost{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+  .btn--ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+  .checker{height:14px;background:repeating-conic-gradient(var(--ink) 0% 25%,#1c1c1c 0% 50%) 0/24px 24px}
+
+  .concept{background:#000;color:#bbb;font-size:.78rem;letter-spacing:.04em;text-align:center;padding:8px 16px}
+  .concept b{color:var(--race)}
+
+  /* aktuální lokalita */
+  .locbar{background:var(--race);color:#fff;text-align:center;padding:11px 16px;font-weight:700;font-size:.95rem;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+  .pulse{width:11px;height:11px;border-radius:50%;background:var(--bolt);box-shadow:0 0 0 0 rgba(255,212,0,.7);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,212,0,.7)}70%{box-shadow:0 0 0 12px rgba(255,212,0,0)}100%{box-shadow:0 0 0 0 rgba(255,212,0,0)}}
+  .locbar b{background:rgba(0,0,0,.22);padding:2px 10px;border-radius:5px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-family:var(--disp);font-size:1.7rem;letter-spacing:.02em;display:flex;align-items:center;gap:8px;font-style:italic}
+  .logo b{color:var(--race)}
+  .navlinks{display:flex;gap:28px;font-size:.92rem;font-weight:600}
+  .navlinks a{color:var(--gray);transition:.15s}
+  .navlinks a:hover{color:#fff}
+  .nav-cta{padding:10px 22px;font-size:.85rem}
+  @media(max-width:860px){.navlinks{display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:90px 0 100px;overflow:hidden;background:radial-gradient(100% 120% at 85% 0%,#241200 0%,var(--ink) 55%)}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,77,0,.04) 38px 40px);pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(3.2rem,11vw,8rem);max-width:12ch}
+  .hero h1 .o{color:var(--race)}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.35rem);max-width:48ch;color:#cfcfcf;margin-top:22px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:48px}
+  .hero-stats div{border-left:3px solid var(--race);padding-left:14px}
+  .hero-stats .n{font-family:var(--disp);font-size:2rem;line-height:1}
+  .hero-stats .l{font-size:.82rem;color:var(--gray);text-transform:uppercase;letter-spacing:.1em}
+
+  section{padding:84px 0}
+  .sec-head{margin-bottom:46px}
+  .sec-head h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-top:12px}
+  .grid{display:grid;gap:20px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+
+  .card{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:30px;transition:.15s}
+  .card:hover{border-color:var(--race);transform:translateY(-4px)}
+  .card .step{font-family:var(--disp);font-size:3rem;color:var(--race);line-height:1}
+  .card h3{font-size:1.5rem;margin:6px 0 8px}
+  .card p{color:var(--gray);font-size:.98rem}
+  .card .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+  .tag-e{background:rgba(255,212,0,.15);color:var(--bolt)}
+  .tag-b{background:rgba(255,77,0,.15);color:var(--race)}
+
+  .paper{background:var(--paper);color:var(--ink)}
+  .paper .sec-head h2{color:var(--ink)}
+  .paper .card{background:#fff;border-color:rgba(0,0,0,.08)}
+  .paper .card p{color:#555}
+
+  /* price */
+  .price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:860px){.price{grid-template-columns:1fr}}
+  .price .pc{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:34px;text-align:center}
+  .price .pc.hot{background:var(--ink);color:#fff;border-color:var(--race)}
+  .price .pc .amt{font-family:var(--disp);font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;color:var(--race)}
+  .price .pc.hot .amt{color:var(--bolt)}
+  .price .pc .u{font-size:.95rem;color:#777;margin-top:6px}
+  .price .pc.hot .u{color:#aaa}
+  .price .pc .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:14px}
+
+  .incl{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+  @media(max-width:560px){.incl{grid-template-columns:1fr}}
+  .incl div{display:flex;gap:12px;align-items:center;font-weight:600}
+  .incl .ic{width:34px;height:34px;border-radius:8px;background:var(--race);color:#fff;display:flex;align-items:center;justify-content:center;flex:none;font-size:1.1rem}
+
+  /* kufr hook */
+  .hook{background:var(--bolt);color:var(--ink);text-align:center}
+  .hook h2{font-size:clamp(2.4rem,7vw,5rem)}
+  .hook p{max-width:46ch;margin:18px auto 0;font-size:1.15rem;font-weight:500}
+
+  /* safety */
+  .safe{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:860px){.safe{grid-template-columns:repeat(2,1fr)}}
+  .safe div{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;font-weight:600;font-size:.94rem}
+  .safe .em{font-family:var(--disp);font-size:1.6rem;color:var(--race);display:block;margin-bottom:6px}
+
+  form{display:grid;gap:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.row{grid-template-columns:1fr}}
+  input,textarea,select{width:100%;padding:14px 16px;border:1px solid rgba(0,0,0,.2);border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--race)}
+  label{font-size:.82rem;font-weight:700;color:#555;margin-bottom:-6px;text-transform:uppercase;letter-spacing:.06em}
+
+  details{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:0 22px;margin-bottom:12px}
+  summary{cursor:pointer;padding:20px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--race);font-size:1.5rem;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{padding:0 0 20px;color:var(--gray)}
+
+  footer{background:#000;padding:54px 0 38px;color:var(--gray)}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+  footer a:hover{color:#fff}
+  .fine{font-size:.8rem;color:#555;margin-top:22px}
+  .wa{background:#25D366;color:#fff;border-color:#25D366}
+  .wa:hover{background:#1da851;border-color:#1da851;color:#fff}
+</style>
+</head>
+<body>
+
+<div class="concept">■ <b>KONCEPT</b> — vizuální návrh značky pro klienta. Texty a fotky jsou ukázkové; ceny dle zadání klienta.</div>
+
+<!-- AKTUÁLNÍ LOKALITA (pop-up – měnit na jednom místě) -->
+<div class="locbar"><span class="pulse"></span> TENTO TÝDEN JEZDÍME: <b>[MĚSTO]</b> &nbsp;·&nbsp; do <b>[DATUM]</b> &nbsp;·&nbsp; rezervuj termín ↓</div>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#">PIT<b>STOP</b></a>
+    <div class="navlinks">
+      <a href="#jak">Jak to funguje</a>
+      <a href="#typy">Elektro / benzín</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#bezpecnost">Bezpečnost</a>
+      <a href="#rezervace">Kontakt</a>
+    </div>
+    <a class="btn nav-cta" href="#rezervace">Chci jezdit</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Pronájem dětských pitbike · Praha &amp; po celé ČR</span>
+    <h1>Malá moto.<br><span class="o">Velká</span> jízda.</h1>
+    <p class="lead">Půjč si dětskou pitbike — elektro i benzín. Přivezeme, zaškolíme, naložíme i vyložíme. Ty si jen užíváš jízdu.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#rezervace">Chci jezdit</a>
+      <a class="btn btn--ghost" href="#cenik">Zobrazit ceník</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="n">100 Kč</div><div class="l">/ 10 minut</div></div>
+      <div><div class="n">1 000 Kč</div><div class="l">/ celý den</div></div>
+      <div><div class="n">🪖 + 🎓</div><div class="l">helma a zaškolení v ceně</div></div>
+    </div>
+  </div>
+</section>
+<div class="checker"></div>
+
+<!-- JAK TO FUNGUJE -->
+<section id="jak">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Jednoduše</span><h2>Jak to funguje</h2></div>
+    <div class="grid g3">
+      <div class="card"><div class="step">1</div><h3>Vyber a rezervuj</h3><p>Napiš nám termín a místo. Poradíme, jestli elektro na vyzkoušení, nebo benzín na déle.</p></div>
+      <div class="card"><div class="step">2</div><h3>Přivezeme &amp; zaškolíme</h3><p>Dovezeme stroje, pomůžeme naložit i vyložit, nasadíme helmu a zaškolíme. Předací protokol samozřejmostí.</p></div>
+      <div class="card"><div class="step">3</div><h3>Jezdi</h3><p>Vy jezdíte, my jsme na telefonu. Po skončení vyzvedneme. Žádné starosti, jen zábava.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ELEKTRO vs BENZÍN -->
+<section id="typy" class="paper">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Dvě varianty</span><h2>Elektro nebo benzín?</h2></div>
+    <div class="grid g2">
+      <div class="card"><span class="tag tag-e">⚡ Elektro · krátkodobě</span><h3>Vyzkoušej si to</h3><p>Tišší a jednodušší — ideální na akci, oslavu nebo první svezení. Půjčení od 10 minut, skvělé pro mladší děti.</p></div>
+      <div class="card"><span class="tag tag-b">⛽ Benzín · dlouhodobě</span><h3>Jezdi naplno</h3><p>Víc výkonu pro starší děti. Pronájem na den a víc — než si pořídíš vlastní, nebo na delší zážitek.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CENÍK -->
+<section id="cenik">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Jasné ceny</span><h2>Ceník</h2></div>
+    <div class="price">
+      <div class="pc"><div class="lbl">Vyzkoušení</div><div class="amt">100 Kč</div><div class="u">/ 10 minut (elektro)</div></div>
+      <div class="pc hot"><div class="lbl">Nejoblíbenější</div><div class="amt">1 000 Kč</div><div class="u">/ celý den</div></div>
+      <div class="pc"><div class="lbl">Vratná kauce</div><div class="amt">5 000 Kč</div><div class="u">vrátíme po vrácení stroje</div></div>
+    </div>
+    <p style="color:var(--gray);font-size:.9rem;margin-top:18px;text-align:center">Hodina / půlden / víkend po domluvě. Ceny dle zadání klienta — mezistupně lze doplnit.</p>
+
+    <h3 style="font-size:1.6rem;margin:50px 0 6px">V ceně máš vždy</h3>
+    <div class="incl">
+      <div><span class="ic">🪖</span> Helma + chrániče</div>
+      <div><span class="ic">📦</span> Naložíme i vyložíme</div>
+      <div><span class="ic">🎓</span> Zaškolení obsluhy</div>
+      <div><span class="ic">📞</span> Podpora i po telefonu</div>
+      <div><span class="ic">📝</span> Předací protokol</div>
+      <div><span class="ic">😎</span> Žádné starosti</div>
+    </div>
+  </div>
+</section>
+
+<!-- KUFR HOOK -->
+<section class="hook">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--ink)">Marketingový trumf</span>
+    <h2>Vejde se do kufru.<br>Zážitek ne.</h2>
+    <p>Naše pitbike jsou malinké — naložíš je i do kufru sedanu. Velikost malá, jízda obří.</p>
+  </div>
+</section>
+
+<!-- BEZPEČNOST -->
+<section id="bezpecnost">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Klid pro rodiče</span><h2>Bezpečně od&nbsp;startu</h2></div>
+    <div class="safe">
+      <div><span class="em">01</span>Helma a chrániče pro každého jezdce</div>
+      <div><span class="em">02</span>Zaškolení a první svezení pod dohledem</div>
+      <div><span class="em">03</span>Stroje servisované a připravené</div>
+      <div><span class="em">04</span>Jsme na telefonu po celou dobu</div>
+    </div>
+    <p style="color:var(--gray);font-size:.9rem;margin-top:16px">* Vhodný věk/výška dětí a podmínky doplní klient.</p>
+  </div>
+</section>
+
+<!-- REZERVACE -->
+<section id="rezervace" class="paper">
+  <div class="wrap">
+    <div class="grid g2" style="align-items:start">
+      <div>
+        <span class="eyebrow">Rezervace</span>
+        <h2 style="font-size:clamp(2.2rem,5vw,3.4rem);margin:12px 0 18px">Pojď jezdit</h2>
+        <p style="color:#555;font-size:1.05rem">Napiš nám termín a místo. Ozveme se a domluvíme detaily — nebo rovnou napiš na WhatsApp, ať to máš hned.</p>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn wa" href="#">WhatsApp</a>
+          <a class="btn btn--ghost" style="border-color:var(--ink);color:var(--ink)" href="tel:+420000000000">+420 000 000 000</a>
+        </div>
+      </div>
+      <div class="card" style="background:#fff">
+        <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+          <div class="row">
+            <div><label>Jméno</label><input required placeholder="Jan Novák"></div>
+            <div><label>Telefon</label><input required placeholder="+420…"></div>
+          </div>
+          <div class="row">
+            <div><label>Lokalita</label><input placeholder="Praha / město"></div>
+            <div><label>Termín</label><input type="date"></div>
+          </div>
+          <div><label>Co tě zajímá</label>
+            <select><option>Elektro — vyzkoušení (10 min)</option><option>Den (1 000 Kč)</option><option>Benzín — dlouhodobě</option><option>Akce / oslava</option></select>
+          </div>
+          <div><label>Zpráva</label><textarea rows="3" placeholder="Počet jezdců, věk dětí, dotazy…"></textarea></div>
+          <button class="btn" type="submit">Odeslat rezervaci</button>
+          <p class="ok" style="display:none;color:var(--race);font-weight:700">Díky! Ozveme se co nejdřív. <span style="color:#999;font-weight:400">(demo formulář — napojí se na e-mail/WhatsApp)</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="checker"></div>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo" style="font-size:1.8rem;margin-bottom:8px">PIT<b style="color:var(--race)">STOP</b></div>
+      <div>Pronájem dětských pitbike · Praha &amp; po celé ČR</div>
+    </div>
+    <div style="text-align:right">
+      <div><a href="tel:+420000000000">+420 000 000 000</a></div>
+      <div><a href="mailto:ahoj@pitstop.cz">ahoj@pitstop.cz</a></div>
+      <div style="margin-top:6px"><a href="#">Instagram</a> · <a href="#">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="fine">Koncept značky · vizuál a copy jsou návrh. Kontakt, ceny a podmínky doplní klient před spuštěním. © Pitstop</p></div>
+</footer>
+
+</body>
+</html>
